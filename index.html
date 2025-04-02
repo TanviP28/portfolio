@@ -6,6 +6,7 @@
     <title>Tanvi Pradhan - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav class="navbar">
@@ -17,6 +18,9 @@
             <li><a href="#skills">Skills</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
+        <div class="theme-toggle">
+            <i class="fas fa-sun"></i>
+        </div>
         <div class="hamburger">
             <span></span>
             <span></span>
@@ -25,83 +29,74 @@
     </nav>
 
     <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Tanvi Pradhan</h1>
-            <p>M.Tech Computer Engineering Student</p>
-            <p>Specializing in Large Language Models (LLMs) and web technologies</p>
-            <div class="cta-buttons">
-                <a href="#projects" class="btn primary">View Projects</a>
-                <a href="#contact" class="btn secondary">Contact Me</a>
-            </div>
-            <div class="social-icons">
-                <a href="https://github.com/tanvipradhan" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+        <div class="container">
+            <div class="hero-content">
+                <div class="profile-dot"></div>
+                <h1>Tanvi Pradhan</h1>
+                <div class="typewriter">
+                    <p id="typing-text">M.Tech Computer Engineering Student</p>
+                </div>
+                <p class="hero-description">Specializing in Large Language Models (LLMs) and web technologies</p>
+                <div class="cta-buttons">
+                    <a href="#projects" class="btn primary">View Projects</a>
+                    <a href="#contact" class="btn secondary">Contact Me</a>
+                </div>
+                <div class="social-icons">
+                    <a href="https://github.com/tanvipradhan" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                </div>
             </div>
         </div>
     </section>
 
     <section id="about" class="about">
-        <h2 class="section-title">About Me</h2>
-        <div class="about-content">
-            <div class="tabs-container">
-                <div class="tabs">
-                    <button class="tab-btn active" data-tab="skills">Skills</button>
-                    <button class="tab-btn" data-tab="experience">Experience</button>
-                    <button class="tab-btn" data-tab="education">Education</button>
-                </div>
-                <div class="tab-content active" id="skills-content">
-                    <p>Master's student in Computer Engineering with hands-on experience in software development, specializing in Large Language Models (LLMs) and web technologies.</p>
-                    <div class="skill-bars">
-                        <div class="skill">
-                            <span>JavaScript/React</span>
-                            <div class="skill-bar"><span class="skill-level" style="width: 85%"></span></div>
-                        </div>
-                        <div class="skill">
-                            <span>Python</span>
-                            <div class="skill-bar"><span class="skill-level" style="width: 90%"></span></div>
-                        </div>
-                        <div class="skill">
-                            <span>Flutter/Dart</span>
-                            <div class="skill-bar"><span class="skill-level" style="width: 75%"></span></div>
-                        </div>
-                        <div class="skill">
-                            <span>HTML/CSS</span>
-                            <div class="skill-bar"><span class="skill-level" style="width: 95%"></span></div>
-                        </div>
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="tabs-container">
+                    <div class="tabs">
+                        <button class="tab-btn active" data-target="profile">Profile</button>
+                        <button class="tab-btn" data-target="experience">Experience</button>
+                        <button class="tab-btn" data-target="education">Education</button>
                     </div>
-                </div>
-                <div class="tab-content" id="experience-content">
-                    <div class="timeline">
-                        <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-content">
-                                <h3>Software Developer Intern</h3>
-                                <h4>Boardwalktech Solutions</h4>
-                                <p class="timeline-date">January 2025 - Present</p>
-                                <p>Contributing to projects involving Large Language Models (LLMs) and Retrieval-Augmented Generation (RAG).</p>
+                    <div class="tab-content active" id="profile-content">
+                        <p>Master's student in Computer Engineering with hands-on experience in software development, specializing in Large Language Models (LLMs) and web technologies.</p>
+                        <p>Strong problem solving abilities and a desire to learn and use cutting-edge AI methodologies.</p>
+                    </div>
+                    <div class="tab-content" id="experience-content">
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <h3>Software Developer Intern</h3>
+                                    <h4>Boardwalktech Solutions</h4>
+                                    <p class="timeline-date">January 2025 - Present</p>
+                                    <p>Contributing to projects involving Large Language Models (LLMs) and Retrieval-Augmented Generation (RAG).</p>
+                                    <p>Collaborating with senior developers to identify and troubleshoot issues while developing innovative AI-driven software solutions.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="tab-content" id="education-content">
-                    <div class="timeline">
-                        <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-content">
-                                <h3>M.Tech in Computer Engineering</h3>
-                                <h4>Veermata Jijabai Technological Institute (VJTI)</h4>
-                                <p class="timeline-date">August 2023 - June 2025</p>
-                                <p>CGPA: 8.8</p>
+                    <div class="tab-content" id="education-content">
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <h3>M.Tech in Computer Engineering</h3>
+                                    <h4>Veermata Jijabai Technological Institute (VJTI)</h4>
+                                    <p class="timeline-date">August 2023 - June 2025</p>
+                                    <p>CGPA: 8.8</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-content">
-                                <h3>B.E in Computer Engineering</h3>
-                                <h4>University of Mumbai</h4>
-                                <p class="timeline-date">August 2019 - May 2023</p>
-                                <p>CGPA: 9.52</p>
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <h3>B.E in Computer Engineering</h3>
+                                    <h4>University of Mumbai</h4>
+                                    <p class="timeline-date">August 2019 - May 2023</p>
+                                    <p>CGPA: 9.52</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -111,27 +106,90 @@
     </section>
 
     <section id="projects" class="projects">
-        <h2 class="section-title">My Projects</h2>
-        <div class="filter-buttons">
-            <button class="filter-btn active" data-filter="all">All</button>
-            <button class="filter-btn" data-filter="web">Web</button>
-            <button class="filter-btn" data-filter="mobile">Mobile</button>
-            <button class="filter-btn" data-filter="ai">AI/ML</button>
+        <div class="container">
+            <h2 class="section-title">My Projects</h2>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Web</button>
+                <button class="filter-btn" data-filter="mobile">Mobile</button>
+                <button class="filter-btn" data-filter="ai">AI/ML</button>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card" data-category="mobile">
+                    <div class="project-img">
+                        <div class="project-img-placeholder"></div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fas fa-eye"></i></a>
+                                <a href="https://github.com/tanvipradhan" class="project-link"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>AirSense</h3>
+                        <p>Air Quality Monitor App with real-time AQI monitoring and location-based services.</p>
+                        <div class="project-tech">
+                            <span>Flutter</span>
+                            <span>Dart</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- More project cards here -->
+            </div>
         </div>
-        <div class="projects-grid">
-            <!-- Project cards go here -->
+    </section>
+
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-tabs">
+                <button class="skill-tab active" data-target="languages">Languages</button>
+                <button class="skill-tab" data-target="frameworks">Frameworks</button>
+                <button class="skill-tab" data-target="tools">Tools</button>
+            </div>
+            <div class="skills-content active" id="languages-content">
+                <div class="skills-list">
+                    <div class="skill-item" data-skill="Java">
+                        <i class="fab fa-java"></i>
+                        <span>Java</span>
+                    </div>
+                    <div class="skill-item" data-skill="Python">
+                        <i class="fab fa-python"></i>
+                        <span>Python</span>
+                    </div>
+                    <div class="skill-item" data-skill="JavaScript">
+                        <i class="fab fa-js"></i>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="skill-item" data-skill="HTML">
+                        <i class="fab fa-html5"></i>
+                        <span>HTML5</span>
+                    </div>
+                    <div class="skill-item" data-skill="CSS">
+                        <i class="fab fa-css3-alt"></i>
+                        <span>CSS3</span>
+                    </div>
+                    <div class="skill-item" data-skill="Dart">
+                        <i class="fas fa-code"></i>
+                        <span>Dart</span>
+                    </div>
+                </div>
+            </div>
+            <!-- More skill tabs content here -->
         </div>
     </section>
 
     <footer>
-        <div class="footer-content">
-            <div class="footer-logo">TP</div>
-            <div class="social-links">
-                <a href="https://github.com/tanvipradhan" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">TP</div>
+                <div class="social-links">
+                    <a href="https://github.com/tanvipradhan" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                </div>
+                <p class="copyright">© 2025 Tanvi Pradhan. All rights reserved.</p>
             </div>
-            <p class="copyright">© 2025 Tanvi Pradhan. All rights reserved.</p>
         </div>
     </footer>
 
