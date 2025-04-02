@@ -10,12 +10,9 @@
     --success-color: #00b894;
     --error-color: #d63031;
     --font-main: 'Poppins', sans-serif;
-    --font-code: 'Fira Code', monospace;
+    --font-heading: 'Montserrat', sans-serif;
     --transition-speed: 0.3s;
 }
-
-/* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap');
 
 /* Reset and Base Styles */
 * {
@@ -40,6 +37,7 @@ body {
 a {
     text-decoration: none;
     color: inherit;
+    transition: all 0.3s ease;
 }
 
 ul {
@@ -51,6 +49,18 @@ img {
     height: auto;
 }
 
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+section {
+    padding: 100px 0;
+    position: relative;
+}
+
 /* Custom Cursor */
 .cursor {
     position: fixed;
@@ -59,18 +69,4 @@ img {
     background-color: var(--primary-color);
     border-radius: 50%;
     pointer-events: none;
-    transform: translate(-50%, -50%);
-    z-index: 9999;
-    transition: width 0.2s, height 0.2s, background-color 0.2s;
-}
-
-.cursor-follower {
-    position: fixed;
-    width: 30px;
-    height: 30px;
-    border: 2px solid var(--primary-color);
-    border-radius: 50%;
-    pointer-events: none;
-    transform: translate(-50%, -50%);
-    z-index: 9998;
-    transition: all 0.2s ease-out;
+    transform: translate(-50%,
