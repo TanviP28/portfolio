@@ -9,9 +9,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="cursor"></div>
-    <div class="cursor-follower"></div>
-
     <nav class="navbar">
         <div class="logo">TP</div>
         <ul class="nav-links">
@@ -21,6 +18,9 @@
             <li><a href="#skills">Skills</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
+        <div class="theme-toggle">
+            <i class="fas fa-sun"></i>
+        </div>
         <div class="hamburger">
             <span></span>
             <span></span>
@@ -31,7 +31,8 @@
     <section id="home" class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1 class="glitch" data-text="Tanvi Pradhan">Tanvi Pradhan</h1>
+                <div class="profile-dot"></div>
+                <h1>Tanvi Pradhan</h1>
                 <div class="typewriter">
                     <p id="typing-text">M.Tech Computer Engineering Student</p>
                 </div>
@@ -46,11 +47,6 @@
                     <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
                 </div>
             </div>
-            <div class="hero-visual">
-                <div class="shape shape1"></div>
-                <div class="shape shape2"></div>
-                <div class="shape shape3"></div>
-            </div>
         </div>
     </section>
 
@@ -58,38 +54,15 @@
         <div class="container">
             <h2 class="section-title">About Me</h2>
             <div class="about-content">
-                <div class="about-image">
-                    <div class="image-container">
-                        <div class="blob"></div>
-                        <div class="profile-placeholder"></div>
-                    </div>
-                </div>
-                <div class="about-text">
+                <div class="tabs-container">
                     <div class="tabs">
-                        <button class="tab-btn active" data-target="skills">Skills</button>
+                        <button class="tab-btn active" data-target="profile">Profile</button>
                         <button class="tab-btn" data-target="experience">Experience</button>
                         <button class="tab-btn" data-target="education">Education</button>
                     </div>
-                    <div class="tab-content active" id="skills-content">
+                    <div class="tab-content active" id="profile-content">
                         <p>Master's student in Computer Engineering with hands-on experience in software development, specializing in Large Language Models (LLMs) and web technologies.</p>
-                        <div class="skill-bars">
-                            <div class="skill">
-                                <span>JavaScript/React</span>
-                                <div class="skill-bar"><span class="skill-level" style="width: 85%"></span></div>
-                            </div>
-                            <div class="skill">
-                                <span>Python</span>
-                                <div class="skill-bar"><span class="skill-level" style="width: 90%"></span></div>
-                            </div>
-                            <div class="skill">
-                                <span>Flutter/Dart</span>
-                                <div class="skill-bar"><span class="skill-level" style="width: 75%"></span></div>
-                            </div>
-                            <div class="skill">
-                                <span>HTML/CSS</span>
-                                <div class="skill-bar"><span class="skill-level" style="width: 95%"></span></div>
-                            </div>
-                        </div>
+                        <p>Strong problem solving abilities and a desire to learn and use cutting-edge AI methodologies.</p>
                     </div>
                     <div class="tab-content" id="experience-content">
                         <div class="timeline">
@@ -100,6 +73,7 @@
                                     <h4>Boardwalktech Solutions</h4>
                                     <p class="timeline-date">January 2025 - Present</p>
                                     <p>Contributing to projects involving Large Language Models (LLMs) and Retrieval-Augmented Generation (RAG).</p>
+                                    <p>Collaborating with senior developers to identify and troubleshoot issues while developing innovative AI-driven software solutions.</p>
                                 </div>
                             </div>
                         </div>
@@ -160,45 +134,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="project-card" data-category="web">
-                    <div class="project-img">
-                        <div class="project-img-placeholder"></div>
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="#" class="project-link"><i class="fas fa-eye"></i></a>
-                                <a href="https://github.com/tanvipradhan" class="project-link"><i class="fab fa-github"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>SpendSpot</h3>
-                        <p>Budget Management Dashboard with Firebase authentication and real-time data synchronization.</p>
-                        <div class="project-tech">
-                            <span>ReactJS</span>
-                            <span>Firebase</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card" data-category="ai">
-                    <div class="project-img">
-                        <div class="project-img-placeholder"></div>
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="#" class="project-link"><i class="fas fa-eye"></i></a>
-                                <a href="https://github.com/tanvipradhan" class="project-link"><i class="fab fa-github"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>Intelli</h3>
-                        <p>Query ChatBot leveraging semantic analysis and NLP for advanced text processing capabilities.</p>
-                        <div class="project-tech">
-                            <span>Python</span>
-                            <span>Flask</span>
-                            <span>NLP</span>
-                        </div>
-                    </div>
-                </div>
+                <!-- More project cards here -->
             </div>
         </div>
     </section>
@@ -206,133 +142,40 @@
     <section id="skills" class="skills-section">
         <div class="container">
             <h2 class="section-title">Technical Skills</h2>
-            <div class="skills-container">
-                <div class="skills-category">
-                    <h3>Programming Languages</h3>
-                    <div class="skills-list">
-                        <div class="skill-item" data-skill="Java">
-                            <i class="fab fa-java"></i>
-                            <span>Java</span>
-                        </div>
-                        <div class="skill-item" data-skill="Python">
-                            <i class="fab fa-python"></i>
-                            <span>Python</span>
-                        </div>
-                        <div class="skill-item" data-skill="JavaScript">
-                            <i class="fab fa-js"></i>
-                            <span>JavaScript</span>
-                        </div>
-                        <div class="skill-item" data-skill="HTML">
-                            <i class="fab fa-html5"></i>
-                            <span>HTML5</span>
-                        </div>
-                        <div class="skill-item" data-skill="CSS">
-                            <i class="fab fa-css3-alt"></i>
-                            <span>CSS3</span>
-                        </div>
-                        <div class="skill-item" data-skill="Dart">
-                            <i class="fas fa-code"></i>
-                            <span>Dart</span>
-                        </div>
+            <div class="skills-tabs">
+                <button class="skill-tab active" data-target="languages">Languages</button>
+                <button class="skill-tab" data-target="frameworks">Frameworks</button>
+                <button class="skill-tab" data-target="tools">Tools</button>
+            </div>
+            <div class="skills-content active" id="languages-content">
+                <div class="skills-list">
+                    <div class="skill-item" data-skill="Java">
+                        <i class="fab fa-java"></i>
+                        <span>Java</span>
                     </div>
-                </div>
-                <div class="skills-category">
-                    <h3>Frameworks & Technologies</h3>
-                    <div class="skills-list">
-                        <div class="skill-item" data-skill="React">
-                            <i class="fab fa-react"></i>
-                            <span>ReactJS</span>
-                        </div>
-                        <div class="skill-item" data-skill="Flutter">
-                            <i class="fas fa-mobile-alt"></i>
-                            <span>Flutter</span>
-                        </div>
-                        <div class="skill-item" data-skill="Bootstrap">
-                            <i class="fab fa-bootstrap"></i>
-                            <span>Bootstrap</span>
-                        </div>
-                        <div class="skill-item" data-skill="Spring">
-                            <i class="fas fa-leaf"></i>
-                            <span>Spring Boot</span>
-                        </div>
-                        <div class="skill-item" data-skill="Flask">
-                            <i class="fas fa-flask"></i>
-                            <span>Flask</span>
-                        </div>
-                        <div class="skill-item" data-skill="Firebase">
-                            <i class="fas fa-fire"></i>
-                            <span>Firebase</span>
-                        </div>
+                    <div class="skill-item" data-skill="Python">
+                        <i class="fab fa-python"></i>
+                        <span>Python</span>
+                    </div>
+                    <div class="skill-item" data-skill="JavaScript">
+                        <i class="fab fa-js"></i>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="skill-item" data-skill="HTML">
+                        <i class="fab fa-html5"></i>
+                        <span>HTML5</span>
+                    </div>
+                    <div class="skill-item" data-skill="CSS">
+                        <i class="fab fa-css3-alt"></i>
+                        <span>CSS3</span>
+                    </div>
+                    <div class="skill-item" data-skill="Dart">
+                        <i class="fas fa-code"></i>
+                        <span>Dart</span>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Contact Me</h2>
-            <div class="contact-container">
-                <div class="contact-info">
-                    <div class="contact-card">
-                        <i class="fas fa-envelope"></i>
-                        <h3>Email</h3>
-                        <p>tanvipradhan2001@gmail.com</p>
-                    </div>
-                    <div class="contact-card">
-                        <i class="fab fa-github"></i>
-                        <h3>GitHub</h3>
-                        <a href="https://github.com/tanvipradhan" target="_blank">github.com/tanvipradhan</a>
-                    </div>
-                    <div class="contact-card">
-                        <i class="fab fa-linkedin"></i>
-                        <h3>LinkedIn</h3>
-                        <a href="#" target="_blank">Connect with me</a>
-                    </div>
-                </div>
-                <div class="contact-form-container">
-                    <div class="terminal">
-                        <div class="terminal-header">
-                            <div class="terminal-buttons">
-                                <span class="terminal-button red"></span>
-                                <span class="terminal-button yellow"></span>
-                                <span class="terminal-button green"></span>
-                            </div>
-                            <div class="terminal-title">contact.sh</div>
-                        </div>
-                        <div class="terminal-body">
-                            <div class="terminal-line">
-                                <span class="terminal-prompt">visitor@tanvi-portfolio:~$</span> 
-                                <span class="terminal-text">send-message</span>
-                            </div>
-                            <form id="contact-form" class="terminal-form">
-                                <div class="terminal-line">
-                                    <span class="terminal-prompt">name:</span> 
-                                    <input type="text" id="name" required>
-                                </div>
-                                <div class="terminal-line">
-                                    <span class="terminal-prompt">email:</span> 
-                                    <input type="email" id="email" required>
-                                </div>
-                                <div class="terminal-line">
-                                    <span class="terminal-prompt">message:</span> 
-                                    <textarea id="message" required></textarea>
-                                </div>
-                                <div class="terminal-line">
-                                    <button type="submit" class="terminal-btn">
-                                        <span class="terminal-prompt">visitor@tanvi-portfolio:~$</span> 
-                                        <span class="terminal-text">./submit</span>
-                                    </button>
-                                </div>
-                            </form>
-                            <div id="form-response" class="terminal-line hidden">
-                                <span class="terminal-prompt">system:</span> 
-                                <span class="terminal-text success">Message sent successfully! I'll get back to you soon.</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <!-- More skill tabs content here -->
         </div>
     </section>
 
@@ -350,8 +193,6 @@
         </div>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
